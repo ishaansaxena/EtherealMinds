@@ -219,13 +219,17 @@ function handleMove(event){
 
 function handleMouseDown(event){
     event.preventDefault();
-    MULTIPLIER = 3;
+    while (MULTIPLIER < 4) {
+        MULTIPLIER += 0.05;
+    }
     // MUSIC.play();
 }
 
 function handleMouseUp(event){
     event.preventDefault();
-    MULTIPLIER = 2;
+    while (MULTIPLIER > 2) {
+        MULTIPLIER -= 0.05;
+    }
     // MUSIC.pause();
 }
 
